@@ -1,20 +1,20 @@
 import './App.css';
+import './index.css';
+
 
 function App() {
+  var message = "Info here";
   return (
     <div className="App">
-      <header className="App-header">
+      <header className=' = App'>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Additional Info(per req)
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <p>
+          <textarea>
+            {message}
+          </textarea>
+        </p>
       </header>
     </div>
   );
