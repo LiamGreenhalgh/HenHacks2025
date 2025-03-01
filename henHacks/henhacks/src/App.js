@@ -11,9 +11,9 @@ function App() {
           Additional Info(per req)
         </p>
         <p>
-          <textarea>
+          <text>
             {message}
-          </textarea>
+          </text>
         </p>
       </header>
     </div>
