@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, memo } from "react";
 import handleAnalyse from "./utils/handleAnalyse";
 import AnalysisBox from "./components/AnalysisBox";
