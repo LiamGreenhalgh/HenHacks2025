@@ -1,7 +1,7 @@
 import json 
 from scapy.all import rdpcap
 
-packets = rdpcap("test.pcap")
+packets = rdpcap("capture.pcap")
 data = []
 
 # for each pkt in packets, create a packet object, store packet source, destination, protocol to that packet object
