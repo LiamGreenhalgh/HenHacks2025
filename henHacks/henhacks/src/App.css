@@ -1,38 +1,88 @@
-.App {
-  text-align: center;
+:root {
+  font-size: 10px;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.analyse-button {
+  font-size: 5rem;
+  background-color: red;
+  border: none;
+  border-radius: 20%;
+  padding: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.output-box {
+  width: 30rem;
+  height: 60rem;
+  background-color: darkslategrey;
   color: white;
+  font-size: 2rem;
+  border-radius: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.loading {
+  font-size: 3rem;
+  color: white;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.list-container {
+  display: grid;
+  grid-template-columns: 50px 100px 130px 150px 70px 60px 1fr;
+  width: 100%;
+  font-family: monospace;
+  border: 1px solid #ccc;
+  font-size: 1.3rem;
+  width: 100rem;
+}
+
+.list-container > span {
+  padding: 0.8rem;
+  font-weight: bold;
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #ccc;
+  text-align: left;
+}
+
+.list-container > span:not(:last-child) {
+  border-right: 1px solid black;
+}
+
+.list-requests {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.list-item {
+  display: grid;
+  grid-template-columns: 50px 100px 130px 150px 70px 60px 1fr;
+  padding: 4px 0;
+}
+
+.list-item.odd {
+  background-color: #b6bcc4;
+}
+
+.list-item.odd:hover {
+  background-color: #a9aeb5;
+}
+
+.list-item.even {
+  background-color: #f1f0f0;
+}
+
+.list-item.even:hover {
+  background-color: #e4e4e4;
+}
+
+/* Add cell content styling */
+.list-item span {
+  padding: 0 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
