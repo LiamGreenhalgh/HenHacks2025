@@ -8,15 +8,15 @@ function AnalysisBox({
   setOutput,
 }) {
   return (
-    <>
-      <button
+    <div className="analysis-container">
+      <div
         className="analyse-button"
         onClick={() => handleAnalyse("What are femboys?")}
       >
         Analyse
-      </button>
+      </div>
       <div className="output-box">{loading ? <Loading /> : output}</div>
-    </>
+    </div>
   );
 }
 

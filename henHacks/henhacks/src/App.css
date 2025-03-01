@@ -5,17 +5,42 @@
   margin: 0;
 }
 
+.app {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: 5fr 3fr;
+  grid-template-rows: 3fr 1fr;
+}
+
+.centre-analysis {
+  display: flex;
+  justify-content: center;
+  padding: 5rem;
+}
+
+.analysis-container {
+
+}
+
 .analyse-button {
-  font-size: 5rem;
-  background-color: red;
+  font-size: 3rem;
+  font-weight: bold;
+  background-color: rgb(153, 152, 152);
   border: none;
-  border-radius: 20%;
+  border-radius: 1rem;
   padding: 1rem;
+  text-align: center;
+}
+
+.analyse-button:hover {
+  background-color: rgb(126, 125, 125);
+  cursor: pointer;
 }
 
 .output-box {
   width: 30rem;
-  height: 60rem;
+  height: 50rem;
   background-color: darkslategrey;
   color: white;
   font-size: 2rem;
@@ -28,18 +53,23 @@
   font-weight: bold;
 }
 
+.wrap-list-container {
+  padding: 5rem;
+}
+
 .list-container {
   display: grid;
   grid-template-columns: 50px 100px 130px 150px 70px 60px 1fr;
+  grid-template-rows: 3.2rem 1fr;
   width: 100%;
   font-family: monospace;
   border: 1px solid #ccc;
   font-size: 1.3rem;
-  width: 100rem;
 }
 
 .list-container > span {
   padding: 0.8rem;
+  height: fit-content;
   font-weight: bold;
   background-color: #f0f0f0;
   border-bottom: 1px solid #ccc;
@@ -85,4 +115,15 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.prompt-container {
+  padding: 5rem;
+}
+
+.prompt-entry {
+  display: block;
+  background-color: #a9aeb5;
+  width: 100%;
+  height: 10rem;
 }

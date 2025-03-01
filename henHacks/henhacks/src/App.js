@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-import { useState, memo } from "react";
+import { useState, memo, useRef, useEffect } from "react";
 import handleAnalyse from "./utils/handleAnalyse";
 import AnalysisBox from "./components/AnalysisBox";
 import ListItem from "./components/ListItem";
@@ -10,46 +9,77 @@ function App() {
   const [output, setOutput] = useState("hello world");
   const [loading, setLoading] = useState(false);
   const [readings, setReadings] = useState([]);
-  const [demo, setDemo] = useState();
-
-  /* const ListItem = memo(({ item }) => {
-    return <li>Test</li>;
-  })
-
-  function EfficientList() {
-    const [items, setItems] = useState([]);
-    const [inputValue, setInputValue] = useState('');
-  
-    const addItem = () => {
-      if (inputValue.trim()) {
-        setItems(prevItems => [...prevItems, {
-          id: Date.now(),
-        }]);
-        setInputValue('');
-      }
-    }; */
 
   return (
-    <div className="App">
-      <header>
+    <div className="app">
+      <div className="wrap-list-container">
+        <ListContainer />
+      </div>
+      <div className="centre-analysis">
+        <AnalysisBox
+          handleAnalyse={handleAnalyse}
+          loading={loading}
+          setLoading={setLoading}
+          output={output}
+          setOutput={setOutput}
+        />
+      </div>
+      <div>
         <p>Additional Info(per req)</p>
-        <p>
-          <textarea>hello</textarea>
-        </p>
-      </header>
-      <AnalysisBox
-        handleAnalyse={handleAnalyse}
-        loading={loading}
-        setLoading={setLoading}
-        output={output}
-        setOutput={setOutput}
-      />
-      <ListContainer />
+        <div className="additional-info">
+          Info
+        </div>
+      </div>
+      <div className="prompt-container">
+        <div className="prompt-entry">
+          <textarea placeholder="type something" className="entry"></textarea>
+        </div>
+      </div>
     </div>
   );
 }
 
+/* const ListMember = memo(({ item }) => {
+  return <li>{item}</li>;
+});
+
+function Demo() {
+  const [arr, setArr] = useState([]);
+  const intervalRef = useRef(null);
+
+  // Clean up interval on unmount
+  useEffect(() => {
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    };
+  }, []);
+
+  function start() {
+    // Clear any existing interval
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
+
+    // Create new interval
+    intervalRef.current = setInterval(() => {
+      const date = Date.now();
+      // Use functional update to get latest state
+      setArr((prevArr) => [...prevArr, date]);
+    }, 1000);
+  }
+
+  return (
+    <>
+      <button onClick={start}>Start</button>
+      <ul>
+        {arr.map((el) => (
+          <ListMember key={el} item={el} />
+        ))}
+      </ul>
+    </>
+  );
+} */
+
 export default App;
-
-
-
