@@ -16,5 +16,5 @@ for pkt in packets:
         data.append(packet_info)
 
 # open packets json file and dump packet objects into json file
-with open("packets.json", "w") as f:
+with open("../backend/packets.json", "w") as f:
     json.dump(data,f, indent=2)
