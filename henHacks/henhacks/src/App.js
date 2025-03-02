@@ -1,4 +1,5 @@
 import { useState, memo, useRef, useEffect } from "react";
+import axios from "axios"
 import handleAnalyse from "./utils/handleAnalyse";
 import AnalysisBox from "./components/AnalysisBox";
 import ListItem from "./components/ListItem";
@@ -12,6 +13,16 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [inputValue, setInputValue] = useState("");
   const [readings, setReadings] = useState([]);
+
+
+
+  const loadData = () => {
+    axios
+        .get("http://localhost:8000/packets")
+        .then(data => console.log(data.data))
+        .catch(error => console.log(error))
+  }
+  loadData()
 
   return (
     <div className="app">
