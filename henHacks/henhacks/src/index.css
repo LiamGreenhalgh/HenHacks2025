@@ -11,14 +11,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.create{
+  max-width: 400px;
 
+}
 
-.create textarea{
+.create text{
   width: 100%; 
   padding: 6px 10px;
   margin: 10px 0;
-  border: 1pxs solid #221212;
+  border: 1pxs solid #150f0f;
   background-color: #332c2c;
-  color: aliceblue;
+  color: rgb(92, 109, 124);
   display: block;
 }

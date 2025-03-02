@@ -5,13 +5,13 @@ function AnalysisBox({
   loading,
   setLoading,
   output,
-  setOutput,
+  setOutput
 }) {
   return (
     <div className="analysis-container">
       <div
         className="analyse-button"
-        onClick={() => handleAnalyse("What are femboys?")}
+        onClick={() => handleAnalyse("What are femboys?", setLoading, setOutput)}
       >
         Analyse
       </div>

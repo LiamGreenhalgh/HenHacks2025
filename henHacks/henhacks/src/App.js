@@ -8,6 +8,7 @@ import "./App.css";
 function App() {
   const [output, setOutput] = useState("hello world");
   const [loading, setLoading] = useState(false);
+  const [inputValue, setInputValue] = useState("");
   const [readings, setReadings] = useState([]);
 
   return (
@@ -24,15 +25,13 @@ function App() {
           setOutput={setOutput}
         />
       </div>
-      <div>
-        <p>Additional Info(per req)</p>
-        <div className="additional-info">
-          Info
-        </div>
+      <div className="add-info-container">
+        <div className="additional-info">Info</div>
       </div>
       <div className="prompt-container">
         <div className="prompt-entry">
-          <textarea placeholder="type something" className="entry"></textarea>
+          <textarea placeholder="type something" className="entry" value={inputValue} onChange={(e) => setInputValue(e.target.inputValue)}></textarea>
+          <button className="submit-btn" onClick={() => handleAnalyse(inputValue, setLoading, setOutput)}>submit</button>
         </div>
       </div>
     </div>
