@@ -1,92 +1,32 @@
 [
   {
     "source": "128.4.95.62",
-    "destination": "13.107.137.11",
-    "protocol": 6,
-    "length": 2722
+    "destination": "172.253.115.138",
+    "protocol": 17,
+    "length": 71
+  },
+  {
+    "source": "172.253.115.138",
+    "destination": "128.4.95.62",
+    "protocol": 17,
+    "length": 68
   },
   {
     "source": "128.4.95.62",
-    "destination": "13.107.137.11",
-    "protocol": 6,
-    "length": 1468
+    "destination": "142.251.111.95",
+    "protocol": 17,
+    "length": 71
   },
   {
-    "source": "13.107.137.11",
+    "source": "142.251.111.95",
     "destination": "128.4.95.62",
-    "protocol": 6,
-    "length": 56
-  },
-  {
-    "source": "13.107.137.11",
-    "destination": "128.4.95.62",
-    "protocol": 6,
-    "length": 66
-  },
-  {
-    "source": "13.107.137.11",
-    "destination": "128.4.95.62",
-    "protocol": 6,
-    "length": 56
-  },
-  {
-    "source": "13.107.137.11",
-    "destination": "128.4.95.62",
-    "protocol": 6,
-    "length": 1436
-  },
-  {
-    "source": "13.107.137.11",
-    "destination": "128.4.95.62",
-    "protocol": 6,
-    "length": 1436
-  },
-  {
-    "source": "13.107.137.11",
-    "destination": "128.4.95.62",
-    "protocol": 6,
-    "length": 123
+    "protocol": 17,
+    "length": 69
   },
   {
     "source": "128.4.95.62",
-    "destination": "13.107.137.11",
-    "protocol": 6,
-    "length": 54
-  },
-  {
-    "source": "162.159.136.234",
-    "destination": "128.4.95.62",
-    "protocol": 6,
-    "length": 118
-  },
-  {
-    "source": "13.107.137.11",
-    "destination": "128.4.95.62",
-    "protocol": 6,
-    "length": 1436
-  },
-  {
-    "source": "128.4.95.62",
-    "destination": "13.107.137.11",
-    "protocol": 6,
-    "length": 66
-  },
-  {
-    "source": "128.4.95.62",
-    "destination": "52.104.107.39",
-    "protocol": 6,
-    "length": 2745
-  },
-  {
-    "source": "52.104.107.39",
-    "destination": "128.4.95.62",
-    "protocol": 6,
-    "length": 66
-  },
-  {
-    "source": "52.104.107.39",
-    "destination": "128.4.95.62",
-    "protocol": 6,
-    "length": 56
+    "destination": "172.253.63.95",
+    "protocol": 17,
+    "length": 71
   }
 ]
