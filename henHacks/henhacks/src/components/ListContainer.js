@@ -19,7 +19,7 @@ function ListContainer({ packets }) {
             source={pkt.source}
             destination={pkt.destination}
             protocol={pkt.protocol}
-            length={25}
+            length={pkt.length}
             appData={"Femboy wizards"}
             oddEven={i % 2 === 0 ? "even" : "odd"}
             key={i}
