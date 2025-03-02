@@ -2,8 +2,10 @@ import { useState, memo, useRef, useEffect } from "react";
 import handleAnalyse from "./utils/handleAnalyse";
 import AnalysisBox from "./components/AnalysisBox";
 import ListItem from "./components/ListItem";
+import InfoContainer from "./components/InfoContainer";
 import ListContainer from "./components/ListContainer";
 import "./App.css";
+import PromptContainer from "./components/PromptContainer";
 
 function App() {
   const [output, setOutput] = useState("hello world");
@@ -25,15 +27,14 @@ function App() {
           setOutput={setOutput}
         />
       </div>
-      <div className="add-info-container">
-        <div className="additional-info">Info</div>
-      </div>
-      <div className="prompt-container">
-        <div className="prompt-entry">
-          <textarea placeholder="type something" className="entry" value={inputValue} onChange={(e) => setInputValue(e.target.inputValue)}></textarea>
-          <button className="submit-btn" onClick={() => handleAnalyse(inputValue, setLoading, setOutput)}>submit</button>
-        </div>
-      </div>
+      <InfoContainer />
+      <PromptContainer
+        inputValue={inputValue}
+        setInputValue={setInputValue}
+        handleAnalyse={handleAnalyse}
+        setLoading={setLoading}
+        setOutput={setOutput}
+      />
     </div>
   );
 }
