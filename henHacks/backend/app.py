@@ -1,11 +1,11 @@
-from fastapi import FastAPI, Query
-from fastapi.middleware.cors import CORSMiddleware
-import json
-import os
+from fastapi import FastAPI, Query                      # web framework for building API
+from fastapi.middleware.cors import CORSMiddleware      # helps in handling cross origin requrest
+import json                                             # json parsing 
+import os                                               # for interacting with os (ei checking file existing)
 
-app = FastAPI()
+app = FastAPI()                                         # creates our web server 
 
-# Enable CORS
+# Enable CORS so it can be used on the front end 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # Allows all origins. Change to specific domains for security
@@ -16,8 +16,9 @@ app.add_middleware(
 
 # Load packet data
 def load_packets():
-    file_path = "packets.json"
-    
+    file_path = "packets.json"  # file where the packets exists
+
+    # check if file exists, if not return error saying packets.json is not found
     print(f"Checking if {file_path} exists: {os.path.exists(file_path)}")  # Debugging
     if not os.path.exists(file_path):
         return {"error": "File packets.json not found"}
@@ -25,21 +26,21 @@ def load_packets():
     try:
         with open(file_path, "r") as f:
             data = json.load(f)
-            print("Loaded packets data:", data)  # Debugging
-            
-            # If data is in {"packets": [...] } format, extract the list
-            if isinstance(data, dict) and "packets" in data:
+            print("Loaded packets data:", data)                # Debugging
+            if isinstance(data, dict) and "packets" in data:   # If data is in {"packets": [...] } format, extract the list
                 return data["packets"]
-            return data
+            return data                                        # otherwise return data as is
     except json.JSONDecodeError as e:
-        return {"error": f"JSON decode error: {str(e)}"}
+        return {"error": f"JSON decode error: {str(e)}"}       # return error if theres a json decoing error
     except Exception as e:
-        return {"error": f"Unexpected error: {str(e)}"}
+        return {"error": f"Unexpected error: {str(e)}"}        # otherwise return error if there is any other exception
 
+# home endpoint
 @app.get("/")
 def home():
     return {"message": "Welcome to the Network Analyzer API"}
 
+# endpoint to display full list of packets 
 @app.get("/packets")
 def get_packets(
     protocol: int = Query(None, description="Filter by protocol number"),
