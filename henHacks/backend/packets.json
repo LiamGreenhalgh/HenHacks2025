@@ -2,76 +2,91 @@
   {
     "source": "128.4.95.62",
     "destination": "13.107.137.11",
-    "protocol": 6
+    "protocol": 6,
+    "length": 2722
   },
   {
     "source": "128.4.95.62",
     "destination": "13.107.137.11",
-    "protocol": 6
+    "protocol": 6,
+    "length": 1468
   },
   {
     "source": "13.107.137.11",
     "destination": "128.4.95.62",
-    "protocol": 6
+    "protocol": 6,
+    "length": 56
   },
   {
     "source": "13.107.137.11",
     "destination": "128.4.95.62",
-    "protocol": 6
+    "protocol": 6,
+    "length": 66
   },
   {
     "source": "13.107.137.11",
     "destination": "128.4.95.62",
-    "protocol": 6
+    "protocol": 6,
+    "length": 56
   },
   {
     "source": "13.107.137.11",
     "destination": "128.4.95.62",
-    "protocol": 6
+    "protocol": 6,
+    "length": 1436
   },
   {
     "source": "13.107.137.11",
     "destination": "128.4.95.62",
-    "protocol": 6
+    "protocol": 6,
+    "length": 1436
   },
   {
     "source": "13.107.137.11",
     "destination": "128.4.95.62",
-    "protocol": 6
+    "protocol": 6,
+    "length": 123
   },
   {
     "source": "128.4.95.62",
     "destination": "13.107.137.11",
-    "protocol": 6
+    "protocol": 6,
+    "length": 54
   },
   {
     "source": "162.159.136.234",
     "destination": "128.4.95.62",
-    "protocol": 6
+    "protocol": 6,
+    "length": 118
   },
   {
     "source": "13.107.137.11",
     "destination": "128.4.95.62",
-    "protocol": 6
+    "protocol": 6,
+    "length": 1436
   },
   {
     "source": "128.4.95.62",
     "destination": "13.107.137.11",
-    "protocol": 6
+    "protocol": 6,
+    "length": 66
   },
   {
     "source": "128.4.95.62",
     "destination": "52.104.107.39",
-    "protocol": 6
+    "protocol": 6,
+    "length": 2745
   },
   {
     "source": "52.104.107.39",
     "destination": "128.4.95.62",
-    "protocol": 6
+    "protocol": 6,
+    "length": 66
   },
   {
     "source": "52.104.107.39",
     "destination": "128.4.95.62",
-    "protocol": 6
+    "protocol": 6,
+    "length": 56
   }
 ]

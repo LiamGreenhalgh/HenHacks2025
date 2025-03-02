@@ -11,7 +11,8 @@ for pkt in packets:
         packet_info = {
             "source": pkt["IP"].src,
             "destination": pkt["IP"].dst,
-            "protocol": pkt.proto
+            "protocol": pkt.proto,
+            "length": len(pkt)
         }
         data.append(packet_info)
 
