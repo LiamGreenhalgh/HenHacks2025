@@ -146,6 +146,10 @@
   padding: 4px 0;
 }
 
+.list-item.selected {
+  background-color:  #ecc59f;
+}
+
 .list-item.odd {
   background-color: #cd7f12c9;
 }
@@ -179,7 +183,14 @@
 }
 
 .additional-info {
-  background-color: #b6bcc4;
+  background-color: #e57f49;
+  padding-inline: 0.5rem;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: rgb(30, 29, 29);
+  display: flex;
+  justify-content: space-around;
 }
 
 .prompt-container {

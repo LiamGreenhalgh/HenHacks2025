@@ -1,6 +1,6 @@
 import ListItem from "./ListItem";
 
-function ListContainer({ packets, setSelected }) {
+function ListContainer({ packets, selected, setSelected }) {
   return (
     <div className="list-container">
       <span>No.</span>
@@ -15,6 +15,7 @@ function ListContainer({ packets, setSelected }) {
           <ListItem
             setSelected={setSelected}
             num={i + 1}
+            selected={selected}
             time={Date.now()}
             source={pkt.source}
             destination={pkt.destination}

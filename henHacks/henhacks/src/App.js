@@ -27,7 +27,7 @@ function App() {
   return (
     <div className="app">
       <div className="wrap-list-container">
-        <ListContainer packets={packets} setSelected={setSelected} />
+        <ListContainer packets={packets} selected={selected} setSelected={setSelected} />
       </div>
       <div className="centre-analysis">
         <AnalysisBox handleAnalyse={handleAnalyse} packets={packets} />
