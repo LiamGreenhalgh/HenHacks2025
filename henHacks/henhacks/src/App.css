@@ -146,9 +146,6 @@
   padding: 4px 0;
 }
 
-.list-item.selected {
-  background-color:  #ecc59f;
-}
 
 .list-item.odd {
   background-color: #cd7f12c9;
@@ -162,14 +159,13 @@
   cursor: pointer;
 }
 
-.list-item.even:hover {
+.list-item:hover {
   background-color: #ecc59f;
 }
 
-.list-item.odd:hover {
-  background-color: #ecc59f;
-}
-
+.list-item.selected {
+  background-color:  #ecc59f;
+} 
 /* Add cell content styling */
 .list-item span {
   padding: 0 8px;
