@@ -11,14 +11,14 @@
   width: 100%;
   grid-template-columns: 5fr 3fr;
   grid-template-rows: 3fr 1fr;
-  background-image: url('./img/widen_2440x0.jpg');
+  background-image: url("./img/widen_2440x0.jpg");
   background-size: cover;
   background-position-y: center;
 }
 
 .centre-analysis {
   display: flex;
-  width: 60rem;
+  width: 50rem;
   justify-content: center;
   padding: 5rem;
   grid-column: 2 / 3;
@@ -26,7 +26,7 @@
 }
 
 .analysis-container {
-
+  width: 60rem;
 }
 
 .analyse-button {
@@ -38,6 +38,7 @@
   padding: 1rem;
   width: 96%;
   text-align: center;
+  margin: 2rem;
 }
 
 .analyse-button:hover {
@@ -46,22 +47,31 @@
 }
 
 .output-box {
-  width: 120%;
+  width: 100%;
   height: 50rem;
   color: white;
   font-size: 2rem;
   border-radius: 1rem;
   overflow: auto;
   padding: 2rem;
-  background-image: url('./img/parchment2.png');
-  background-size: cover;
+  background-image: url("./img/parchment2.png");
+  background-size:cover;
+  background-position: center;
   background-position-x: 50%;
+  scale: 1;
+  background-position-y: -20px;
 }
 
 .output {
-  margin-inline: 4rem;
-  padding-top: 5rem;
-  width: 20rem;
+  position: absolute;
+  margin-inline: 6rem;
+  width: 40rem;
+  height: 80%;
+  overflow: scroll;
+  overflow-x: hidden;
+  color: rgb(36, 36, 36);
+  font-weight: 400;
+  top: 9.5rem;
 }
 
 .loading {
@@ -143,7 +153,6 @@
 
 .additional-info {
   background-color: #b6bcc4;
-
 }
 
 .prompt-container {
@@ -163,10 +172,8 @@
   height: 100%;
   border: none;
   background-color: #b6bcc4;
-  color: whitesmoke
+  color: whitesmoke;
 }
-
-
 
 .entry::selection {
   background-color: #ccc;
