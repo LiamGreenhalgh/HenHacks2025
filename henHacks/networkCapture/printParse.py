@@ -1,6 +1,6 @@
 from scapy.all import rdpcap
 
-packets = rdpcap("test.pcap")   # store all of the packet information into packets variable 
+packets = rdpcap("capture.pcap")   # store all of the packet information into packets variable 
 
 # for each individual packet in packet list, print out the packet source, destination, and protocol information
 for pkt in packets:
