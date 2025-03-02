@@ -1,13 +1,14 @@
-function ListItem({ oddEven }) {
+function ListItem(props) {
+  console.log(props);
   return (
-    <li className={`list-item ${oddEven}`} id="2">
-      <span>2</span>
-      <span>0.000299</span>
-      <span>128.4.95.62</span>
-      <span>23.48.203.102</span>
-      <span>TLSv1.2</span>
-      <span>3325</span>
-      <span>Application Data</span>
+    <li className={`list-item ${props.oddEven}`}>
+      <span>{props.num}</span>
+      <span>{props.time}</span>
+      <span>{props.source}</span>
+      <span>{props.destination}</span>
+      <span>{props.protocol}</span>
+      <span>{props.length}</span>
+      <span>{props.appData}</span>
     </li>
   );
 }

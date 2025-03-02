@@ -1,5 +1,5 @@
 import { useState, memo, useRef, useEffect } from "react";
-import axios from "axios"
+import axios from "axios";
 import handleAnalyse from "./utils/handleAnalyse";
 import AnalysisBox from "./components/AnalysisBox";
 import ListItem from "./components/ListItem";
@@ -9,33 +9,26 @@ import "./App.css";
 import PromptContainer from "./components/PromptContainer";
 
 function App() {
-  const [output, setOutput] = useState("hello world");
-  const [loading, setLoading] = useState(false);
-  const [readings, setReadings] = useState([]);
+  const [packets, setPackets] = useState([]);
 
-
-
-  const loadData = () => {
+  useEffect(() => {
     axios
-        .get("http://localhost:8000/packets")
-        .then(data => console.log(data.data))
-        .catch(error => console.log(error))
-  }
-  loadData()
+      .get("http://localhost:8000/packets")
+      .then((data) => {
+        console.log(data.data.packets);
+        setPackets(data.data.packets);
+      })
+      .catch((error) => console.log(error));
+  }, []);
+  //function loadData() {}
 
   return (
     <div className="app">
       <div className="wrap-list-container">
-        <ListContainer />
+        <ListContainer packets={packets} />
       </div>
       <div className="centre-analysis">
-        <AnalysisBox
-          handleAnalyse={handleAnalyse}
-          loading={loading}
-          setLoading={setLoading}
-          output={output}
-          setOutput={setOutput}
-        />
+        <AnalysisBox handleAnalyse={handleAnalyse} />
       </div>
       <InfoContainer />
     </div>

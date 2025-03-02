@@ -1,6 +1,7 @@
 import ListItem from "./ListItem";
 
-function ListContainer() {
+function ListContainer({ packets }) {
+  console.log(packets[0]);
   return (
     <div className="list-container">
       <span>No.</span>
@@ -11,8 +12,21 @@ function ListContainer() {
       <span>Length</span>
       <span>info</span>
       <ul className="list-requests">
-        <ListItem oddEven={"odd"} />
-        <ListItem oddEven={"even"} />
+        {packets.map((pkt, i) => (
+          <ListItem
+            num={i + 1}
+            time={Date.now()}
+            source={pkt.source}
+            destination={pkt.destination}
+            protocol={pkt.protocol}
+            length={25}
+            appData={"Femboy wizards"}
+            oddEven={i % 2 === 0 ? "even" : "odd"}
+            key={i}
+          />
+        ))}
+        {/* <ListItem oddEven={"odd"} />
+        <ListItem oddEven={"even"} /> */}
       </ul>
     </div>
   );

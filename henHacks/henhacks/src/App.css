@@ -7,14 +7,18 @@
 
 .app {
   display: grid;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   grid-template-columns: 5fr 3fr;
   grid-template-rows: 3fr 1fr;
+  background-image: url('./img/widen_2440x0.jpg');
+  background-size: cover;
+  background-position-y: center;
 }
 
 .centre-analysis {
   display: flex;
+  width: 60rem;
   justify-content: center;
   padding: 5rem;
   grid-column: 2 / 3;
@@ -42,14 +46,22 @@
 }
 
 .output-box {
-  width: 100%;
+  width: 120%;
   height: 50rem;
-  background-color: darkslategrey;
   color: white;
   font-size: 2rem;
   border-radius: 1rem;
   overflow: auto;
   padding: 2rem;
+  background-image: url('./img/parchment2.png');
+  background-size: cover;
+  background-position-x: 50%;
+}
+
+.output {
+  margin-inline: 4rem;
+  padding-top: 5rem;
+  width: 20rem;
 }
 
 .loading {
@@ -59,7 +71,8 @@
 }
 
 .wrap-list-container {
-  padding: 5rem;
+  margin: 5rem;
+  background-color: #a6827276;
 }
 
 .list-container {
@@ -68,7 +81,6 @@
   grid-template-rows: 3.2rem 1fr;
   width: 100%;
   font-family: monospace;
-  border: 1px solid #ccc;
   font-size: 1.3rem;
 }
 
@@ -76,8 +88,7 @@
   padding: 0.8rem;
   height: fit-content;
   font-weight: bold;
-  background-color: #f0f0f0;
-  border-bottom: 1px solid #ccc;
+  background-color: #d15913e4;
   text-align: left;
 }
 
@@ -99,19 +110,23 @@
 }
 
 .list-item.odd {
-  background-color: #b6bcc4;
-}
-
-.list-item.odd:hover {
-  background-color: #a9aeb5;
+  background-color: #cd7f12c9;
 }
 
 .list-item.even {
-  background-color: #f1f0f0;
+  background-color: #cb9e5f;
+}
+
+.list-item:hover {
+  cursor: pointer;
 }
 
 .list-item.even:hover {
-  background-color: #e4e4e4;
+  background-color: #ecc59f;
+}
+
+.list-item.odd:hover {
+  background-color: #ecc59f;
 }
 
 /* Add cell content styling */

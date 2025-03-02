@@ -3,17 +3,15 @@ import Loading from "./Loading";
 
 function AnalysisBox({
   handleAnalyse,
-  loading,
-  setLoading,
-  output,
-  setOutput
 }) {
 
+  const [output, setOutput] = useState("hello world");
+  const [loading, setLoading] = useState(false);
   const [inputValue, setInputValue] = useState("");
 
-  function handleEnterPrompt(e) {
-    handleAnalyse(e.target.value, setLoading, setOutput);
-    setInputValue("");
+  function handleEnterPrompt(txt) {
+    handleAnalyse(txt, setLoading, setOutput);
+    setInputValue(" ");
   }
 
 
@@ -27,7 +25,11 @@ function AnalysisBox({
       >
         Analyse
       </div>
-      <div className="output-box">{loading ? <Loading /> : output}</div>
+      <div className="output-box">
+        <div className="output">
+        {loading ? <Loading /> : output}
+        </div>
+      </div>
 
       <div className="prompt-container">
         <div className="prompt-entry">
@@ -35,7 +37,12 @@ function AnalysisBox({
             placeholder="type something"
             className="entry"
             value={inputValue}
-            onChange={(e) => setInputValue(e)}
+            onChange={(e) => setInputValue(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter') {
+                handleEnterPrompt(inputValue);
+              }
+            }}
           ></textarea>
           <button
             className="submit-btn"
