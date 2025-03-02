@@ -1,15 +1,18 @@
-import { useState, memo, useRef, useEffect } from "react";
+import { useState, memo, useRef, useEffect, useCallback, useContext } from "react";
 import axios from "axios";
 import handleAnalyse from "./utils/handleAnalyse";
 import AnalysisBox from "./components/AnalysisBox";
-import ListItem from "./components/ListItem";
 import InfoContainer from "./components/InfoContainer";
 import ListContainer from "./components/ListContainer";
 import "./App.css";
-import PromptContainer from "./components/PromptContainer";
 
 function App() {
   const [packets, setPackets] = useState([]);
+  const [selected, setSelected] = useState(null)
+  
+  useEffect(() => {
+    console.log(packets[selected]);
+  }, [selected])
 
   useEffect(() => {
     axios
@@ -20,17 +23,25 @@ function App() {
       })
       .catch((error) => console.log(error));
   }, []);
-  //function loadData() {}
 
   return (
     <div className="app">
       <div className="wrap-list-container">
-        <ListContainer packets={packets} />
+        <ListContainer packets={packets} setSelected={setSelected} />
       </div>
       <div className="centre-analysis">
-        <AnalysisBox handleAnalyse={handleAnalyse} />
+        <AnalysisBox handleAnalyse={handleAnalyse} packets={packets} />
       </div>
-      <InfoContainer />
+      {selected !== null && packets.length > 0 ? (
+        <InfoContainer
+          pkt={packets[selected]}
+          num={selected}
+          time={Date.now()}
+          appData="Placeholder"
+        />
+      ) : (
+        <p>Loading...</p>
+      )}
     </div>
   );
 }

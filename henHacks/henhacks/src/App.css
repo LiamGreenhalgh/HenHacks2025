@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Monomakh&display=swap");
+
 :root {
   font-size: 10px;
   box-sizing: border-box;
@@ -32,18 +34,28 @@
 .analyse-button {
   font-size: 3rem;
   font-weight: bold;
-  background-color: rgb(153, 152, 152);
+  background-image: url("./img/scale.jpg");
+  background-size: cover;
   border: none;
   border-radius: 1rem;
   padding: 1rem;
-  width: 96%;
+  width: 95%;
+  color: #ee9259;
   text-align: center;
   margin: 2rem;
 }
 
 .analyse-button:hover {
-  background-color: rgb(126, 125, 125);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+  transition: 0.1s;
+  transform: translateY(-2px);
   cursor: pointer;
+}
+
+.analyse-button:active {
+  transform: translateY(0);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
+  transition: 0.1s;
 }
 
 .output-box {
@@ -55,7 +67,7 @@
   overflow: auto;
   padding: 2rem;
   background-image: url("./img/parchment2.png");
-  background-size:cover;
+  background-size: cover;
   background-position: center;
   background-position-x: 50%;
   scale: 1;
@@ -63,16 +75,28 @@
 }
 
 .output {
+  font-family: "Monomakh";
   position: absolute;
   margin-inline: 6rem;
   width: 40rem;
   height: 80%;
   overflow: scroll;
   overflow-x: hidden;
-  color: rgb(36, 36, 36);
+  color: rgb(15, 15, 15);
   font-weight: 400;
   top: 9.5rem;
+  scrollbar-width: none;
 }
+
+.output::-webkit-scrollbar {
+  width: 0;
+}
+
+.output:hover::-webkit-scrollbar {
+  width: 8px;
+}
+
+
 
 .loading {
   font-size: 3rem;
@@ -111,6 +135,9 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+  height: 60rem;
+  overflow: scroll;
+  overflow-x: hidden;
 }
 
 .list-item {
@@ -156,25 +183,57 @@
 }
 
 .prompt-container {
-  padding: 5rem;
+  padding-inline: 7rem;
+  padding-top: 5rem;
 }
 
 .prompt-entry {
   display: block;
-  background-color: #a9aeb5;
-  width: 100%;
+  width: 110%;
   height: 10rem;
+  display: flex;
+  align-items: center;
 }
 
 .entry {
   position: relative;
-  width: 100%;
+  width: 90%;
   height: 100%;
   border: none;
-  background-color: #b6bcc4;
+  padding: 2rem;
+  background-color: #b5652881;
+  color: whitesmoke;
+  font-size: 2rem;
+  border-radius: 5px 0 0 5px;
+}
+
+.submit-btn {
+  background-color: #cb9e5f;
+  border: none;
+  height: 14rem;
+  font-weight: bold;
+  border-radius: 0 5px 5px 0;
+}
+
+.submit-btn:hover {
+  background-color: #c09559;
+  cursor: pointer;
+  transform: translateY(-2px);
+  transition: 0.1s;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+  transition: 0.1s;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+.entry::placeholder {
   color: whitesmoke;
 }
 
 .entry::selection {
   background-color: #ccc;
 }
+

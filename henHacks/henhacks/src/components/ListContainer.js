@@ -1,7 +1,6 @@
 import ListItem from "./ListItem";
 
-function ListContainer({ packets }) {
-  console.log(packets[0]);
+function ListContainer({ packets, setSelected }) {
   return (
     <div className="list-container">
       <span>No.</span>
@@ -14,13 +13,14 @@ function ListContainer({ packets }) {
       <ul className="list-requests">
         {packets.map((pkt, i) => (
           <ListItem
+            setSelected={setSelected}
             num={i + 1}
             time={Date.now()}
             source={pkt.source}
             destination={pkt.destination}
             protocol={pkt.protocol}
             length={pkt.length}
-            appData={"Femboy wizards"}
+            appData={"Placeholder"}
             oddEven={i % 2 === 0 ? "even" : "odd"}
             key={i}
           />
