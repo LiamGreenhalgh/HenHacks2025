@@ -10,7 +10,6 @@ import PromptContainer from "./components/PromptContainer";
 function App() {
   const [output, setOutput] = useState("hello world");
   const [loading, setLoading] = useState(false);
-  const [inputValue, setInputValue] = useState("");
   const [readings, setReadings] = useState([]);
 
   return (
@@ -28,13 +27,6 @@ function App() {
         />
       </div>
       <InfoContainer />
-      <PromptContainer
-        inputValue={inputValue}
-        setInputValue={setInputValue}
-        handleAnalyse={handleAnalyse}
-        setLoading={setLoading}
-        setOutput={setOutput}
-      />
     </div>
   );
 }

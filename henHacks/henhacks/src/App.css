@@ -17,6 +17,8 @@
   display: flex;
   justify-content: center;
   padding: 5rem;
+  grid-column: 2 / 3;
+  grid-row: 1/3;
 }
 
 .analysis-container {
@@ -30,6 +32,7 @@
   border: none;
   border-radius: 1rem;
   padding: 1rem;
+  width: 96%;
   text-align: center;
 }
 
@@ -39,12 +42,14 @@
 }
 
 .output-box {
-  width: 30rem;
+  width: 100%;
   height: 50rem;
   background-color: darkslategrey;
   color: white;
   font-size: 2rem;
   border-radius: 1rem;
+  overflow: auto;
+  padding: 2rem;
 }
 
 .loading {
@@ -123,7 +128,7 @@
 
 .additional-info {
   background-color: #b6bcc4;
-  
+
 }
 
 .prompt-container {
