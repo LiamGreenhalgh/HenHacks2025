@@ -4,3 +4,4 @@ Authors:
 Alex Mena
 Egor Prasolov
 Liam Greenhalgh
+Joshua Washington
